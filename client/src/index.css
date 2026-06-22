@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-black: #111111;
+  --color-white: #ffffff;
+  
+  --color-gray-50: #fcfbfa;
+  --color-gray-100: #fcfbfa;
+  --color-gray-200: rgba(140, 133, 123, 0.3);
+  --color-gray-300: rgba(140, 133, 123, 0.5);
+  --color-gray-400: #8c857b;
+  --color-gray-500: #8c857b;
+  
+  --color-orange-500: #f37023;
+  --color-orange-600: #d45c16;
+  
+  --font-sans: 'Outfit', 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: #fcfbfa;
+    color: #111111;
+    font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Premium clean styling tokens */
+.bg-editorial-white {
+  background-color: #ffffff;
+}
+
+.bg-editorial-gray {
+  background-color: #fcfbfa;
+}
+
+.border-editorial {
+  border-color: rgba(140, 133, 123, 0.3);
+}
+
+.text-editorial-black {
+  color: #111111;
+}
+
+.text-editorial-muted {
+  color: #8c857b;
+}
+
+/* Clean cards style */
+.editorial-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(140, 133, 123, 0.3);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(140, 133, 123, 0.05);
+  border-color: #f37023;
+}
+
+/* Active CTA button style - Energetic Coral */
+.btn-black {
+  background-color: #f37023;
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.btn-black:hover {
+  background-color: #d45c16;
+}
+
+/* Secondary outline button style */
+.btn-outline {
+  background-color: transparent;
+  color: #111111;
+  border: 1px solid rgba(140, 133, 123, 0.3);
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  background-color: #fcfbfa;
+  border-color: #f37023;
+}
+
+/* Premium scrollbar for editorial styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fcfbfa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e0deda;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f37023;
+}
+
+/* Fade-in animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
